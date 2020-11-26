@@ -47,7 +47,7 @@ def analyze(data: pd.DataFrame, num_moons_analyze: int) -> None:
     plt.plot(semimajor_axis_cubed, orbital_periods_squared, 'o', label='Data')
     x_float = np.array(semimajor_axis_cubed).astype('float')
     plt.plot(x_float, slope * x_float + y_intercept,
-             'r', label='Least Square Fit')
+             'r', label=f'Least Square Fit,\ny = {slope} * x\n+ {y_intercept}')
     plt.title(
         f'Orbital Period vs Semi-Major Axis for {num_moons_analyze} moon(s)')
     plt.xlabel('R^3 (m^3)')

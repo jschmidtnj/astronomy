@@ -10,7 +10,7 @@ The goal of this lab was to determine the mass of Jupiter through observing its 
 
 ## Data
 
-The first step is to gather data for at least 15 moons. I decided to write everything in Python as opposed to in Excel. I used Beautiful Soup 4 to extract the table html tags from the wikipedia entry for Jupiter's moons (all of the source code can be found [here](https://github.com/jschmidtnj/astronomy/blob/main/lab1)). This is the link to the wikipedia entry, with the source data: [link](https://en.wikipedia.org/wiki/Moons_of_Jupiter#List). The data was then parsed into a Pandas dataframe and cleaned, removing text and converting the strings into numeric values. The output dataframe looks similar to what is shown below:
+The first step is to gather data for at least 15 moons. I decided to write everything in Python as opposed to in Excel. I used Beautiful Soup 4 to extract the table html tags from the wikipedia entry for Jupiter's moons (all of the source code can be found [here](https://github.com/jschmidtnj/astronomy/tree/main/lab1)). This is the link to the wikipedia entry, with the source data: [link](https://en.wikipedia.org/wiki/Moons_of_Jupiter#List). The data was then parsed into a Pandas dataframe and cleaned, removing text and converting the strings into numeric values. The output dataframe looks similar to what is shown below:
 
 ```txt
 2020-11-25 22:23:02.399 | INFO     | __main__:main:28 - sample of data:
@@ -50,7 +50,7 @@ Below are the outputted plots from running the script:
 
 ## Calculation
 
-Given the slope of the least square regression line, I used the following equation to calculate Jupiter's mass: $M = \frac{4 \cdot \pi^{2}}{G \cdot slope}$. The log output for the entire program can be found [here](https://github.com/jschmidtnj/astronomy/blob/main/lab1/output/logs.txt).
+Given the slope of the least square regression line, I used the following equation to calculate Jupiter's mass: $M = \frac{4 \cdot \pi^{2}}{G \cdot slope}$. The log output for the entire program can be found [here](https://github.com/jschmidtnj/astronomy/blob/main/lab1/output/logs.txt). $G$ is the gravitational constant, and the slope is 3.115590223034021e-16 for the 20 most massive moons and 3.115578858961228e-16 for the four Galileo moons.
 
 ## Comparison
 
