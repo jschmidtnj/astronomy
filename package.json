@@ -1,0 +1,22 @@
+{
+  "name": "cs584",
+  "version": "1.0.0",
+  "description": "cs 584",
+  "main": "index.js",
+  "repository": "git@github.com:jschmidtnj/cs585.git",
+  "author": "Joshua <jschmidtnj@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "husky": "^4.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "post-checkout": "echo $HUSKY_GIT_STDIN | scripts/lfs-hooks/post-checkout $HUSKY_GIT_PARAMS",
+      "post-commit": "echo $HUSKY_GIT_STDIN | scripts/lfs-hooks/post-commit $HUSKY_GIT_PARAMS",
+      "post-merge": "echo $HUSKY_GIT_STDIN | scripts/lfs-hooks/post-merge $HUSKY_GIT_PARAMS",
+      "pre-push": "echo $HUSKY_GIT_STDIN | scripts/lfs-hooks/pre-push $HUSKY_GIT_PARAMS",
+      "pre-commit": "./precommit.sh"
+    }
+  }
+}
